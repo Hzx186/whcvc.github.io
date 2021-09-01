@@ -1,0 +1,305 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/*头部*/
+.navbar {
+	font-size: 16px;
+	width: 100%;
+	margin-bottom: auto;
+	/*	height: 53px;*/
+}
+
+.navbar-brand {
+	width: 500px;
+	font-size: 25px;
+	padding-left: 20%;
+}
+
+.navbar a:hover {}
+
+
+/*中间 轮播图*/
+.zjbg {
+	width: 100%;
+	background: #e3f4f8;
+	margin-top: 0;
+	border-top: #90a8b9 solid 15px;
+}
+/* 媒体查询 */
+@media all and (max-width:1660px) {
+	.box{
+		display: none;
+	}
+	.vd{
+		
+	}
+}
+/* 媒体查询 动画弹出 */
+@media all and (min-width:1222px) {
+	@-webkit-keyframes fadeInLeft {
+		0% {
+			opacity: 0;
+			/* -webkit-transform: translateX(30px); */
+		}	
+		100% {
+			opacity: 1;
+			-webkit-transform: translateX(0);
+		}
+	}
+	 
+	@keyframes fadeInLeft {
+		0% {
+			opacity: 0;
+			transform: translateX(200px);
+		}	
+		100% {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+	
+	/*调用animation属性，从而让按钮在载入页面时就具有动画效果 以-webkit为例，请为不同的浏览器添加前缀 */
+	.center:nth-child(1){ 
+	    -webkit-animation-name: "fadeInLeft"; /*动画名称，需要跟@keyframes定义的名称一致*/
+	    -webkit-animation-duration: 4s;/*动画持续的时间长*/
+	    -webkit-animation-iteration-count: 1;/*动画循环播放的次数为1 infinite为无限次*/
+	} 
+	/* .center:nth-child(2){ -webkit-animation:'fadeInLeft' 1s 1} /* 简写 */ */
+}
+
+
+/* 计信学院 文字 */
+
+/* 太阳 */
+.box {
+	/* 相对定位 */
+	/* position: relative; */
+	margin-top: 600px;
+	margin: 50px auto;
+	margin-left: 20px;
+}
+
+/* 旋转 从0到180 */
+@-webkit-keyframes rotation {
+	from {
+		-webkit-transform: rotate(0deg);
+	}
+
+	to {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+.ty {
+	-webkit-transform: rotate(360deg);
+	animation: rotation 3s linear infinite;
+	-moz-animation: rotation 3s linear infinite;
+	-webkit-animation: rotation 3s linear infinite;
+	-o-animation: rotation 3s linear infinite;
+}
+
+/* @keyframes a{
+				from{transform: rotate(0deg);}
+				to{transform: rotate(360deg);}
+				/* transform-origin: center top; */
+/* animation: a 8s infinite linear; */
+/* } */
+/* @keyframes b{
+				from{transform: rotate(360deg);}
+				to{transform: rotate(0deg);}
+				transform-origin: center top;
+				animation: a 8s infinite linear;
+			} */
+.img, .text{
+	width: 250px;
+	height: 250px;
+	position: absolute;
+	/* top: 0;left: 0; */
+	/* border-radius:100%; */
+}
+
+.text {
+	background-position: 50%;
+	background-image: url(../img/logo2.png);
+	transition: 0.9s;
+	opacity: 0;
+}
+
+/* .text img{
+				position: absolute;
+				text-align: 0 auto ;
+			} */
+/* .img img{
+				width: 260px;
+				height: 260px;
+				border-radius:100%;
+			} */
+
+.img {
+	transition: 0.7s 0.1s;
+	z-index: 4;
+}
+
+/* .img:hover img{
+				transform: rotateY(180deg);
+			} */
+.box:hover .img {
+	transform: translateY(-120%);
+	opacity: 0;
+}
+
+.box:hover .text {
+	opacity: 1;
+	/* transform:translateX(0); */
+}
+
+
+
+/* 视频  介绍 */
+/* 视频 */
+.vd {
+	width: 100%;
+	height: 180px;
+	margin-top: 50PX;
+	/* margin-left: 50PX; */
+	/* float: left; */
+}
+.sp{
+	width: 100%;
+}
+
+.center {
+	margin-left: 50px;
+	margin-top: 100px;
+}
+
+.minwz {
+	width: 300px;
+	margin-top: 18px;
+}
+
+/* 按钮 */
+
+.btn {
+	background: skyblue;
+	width: 70px;
+	height: 35px;
+	color: white;
+	border: none;
+	text-align: center;
+	position: relative;
+	/* overflow: hidden; */
+	transition: all .10s;
+	margin-top: 18px;
+}
+
+.btn:hover {
+	top: -5px;
+	box-shadow: 0 0 15px #AAA;
+
+}
+
+/* 校园生活校园风景 */
+
+
+
+
+/* 专业 */
+.zy {
+	margin-top: 50px;
+	padding-bottom: 60px;
+}
+.j{
+	margin-left: 10px;
+}
+.zy .row {
+	margin-right: 15px;
+}
+/* 招生 */
+.db img{
+	width: 100%;
+}
+/* 列表新闻 */
+.xw {
+	margin-top: 65px;
+	padding-bottom: 50px;
+}
+
+.row a {
+	text-decoration: none;
+	color: dimgrey;
+}
+
+.hz {
+	margin-right: 65px;
+	margin-left: 110px;
+}
+
+.mo {
+	float: right;
+	font-size: 15px;
+	padding-top: 13px;
+}
+.mo:hover {
+	color: darkgray;
+}
+
+.hz ul{
+	list-style: none;
+}
+.hz li {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-bottom: #e7e9eb solid 1px;
+}
+
+.hz li:hover {
+	color: skyblue;
+}
+.hz p {
+	float: right;
+}
+
+.hz ul li:last-child {
+	border: none;
+}
+
+/* 底部 */
+footer {
+	width: 100%;
+	
+	background-color: #333638;
+}
+
+.di {
+	color: white;
+	margin-top: 50px;
+}
+
+/* .dd p{
+	float: right;
+	/* margin-left: 50px; */
+}
+
+.di dd ul {
+	/* margin-top: 90px;
+	float: right;
+	margin-left: 10px; */
+	list-style: none;
+}
+
+.dd li {
+	/* margin-top: 15px; */
+	float: left;
+	margin-right: 20px;
+	/* display: none; */
+}
+
+.dd {
+	/* margin-right: 65px; */
+	padding-top: 75px;
+	padding-bottom: 80px;
+	margin-left: 190px;
+}
